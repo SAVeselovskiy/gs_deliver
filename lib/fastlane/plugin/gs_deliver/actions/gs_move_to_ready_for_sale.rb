@@ -3,7 +3,7 @@ module Fastlane
     class GsMoveToReadyForSale < Action
       def self.run(params)
         app = Spaceship::Tunes::Application.find(params[:app_identifier])
-        return app.edit_version.app_status
+        app.release!
       end
 
       def self.description
@@ -25,11 +25,11 @@ module Fastlane
 
       def self.available_options
         [
-            # FastlaneCore::ConfigItem.new(key: :your_option,
-            #                         env_name: "GS_DELIVER_YOUR_OPTION",
-            #                      description: "A description of your option",
-            #                         optional: false,
-            #                             type: String)
+            FastlaneCore::ConfigItem.new(key: :app_identifier,
+                                    env_name: "GS_APP_IDENTIFIER",
+                                 description: "A description of your option",
+                                    optional: false,
+                                        type: String)
         ]
       end
 
