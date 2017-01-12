@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = %q{veselovskiysergey94@gmail.com}
 
   spec.summary       = %q{Gradoservice plugin to rule apps releases}
-  # spec.homepage      = "https://github.com/SAVeselovskiy/gs_deliver"
+  spec.homepage      = "https://github.com/SAVeselovskiy/gs_deliver"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
