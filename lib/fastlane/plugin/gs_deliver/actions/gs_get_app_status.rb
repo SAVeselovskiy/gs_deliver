@@ -1,5 +1,6 @@
 module Fastlane
   module Actions
+    require 'Spaceship'
     class GsGetAppStatusAction < Action
       def self.run(params)
         app = Spaceship.app.find(params[:app_identifier])
