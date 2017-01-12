@@ -26,11 +26,11 @@ module Fastlane
 
       def self.available_options
         [
-            # FastlaneCore::ConfigItem.new(key: :your_option,
-            #                         env_name: "GS_DELIVER_YOUR_OPTION",
-            #                      description: "A description of your option",
-            #                         optional: false,
-            #                             type: String)
+            FastlaneCore::ConfigItem.new(key: :app_identifier,
+                                    env_name: "BUNDLE_ID",
+                                 description: "A description of your option",
+                                    optional: false,
+                                        type: String)
         ]
       end
 
