@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fastlane/plugin/gs_deliver/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'gs_deliver'
+  spec.name          = 'fastlane-plugin-gs_deliver'
   spec.version       = Fastlane::GsDeliver::VERSION
   spec.author        = %q{Сергей Веселовский}
   spec.email         = %q{veselovskiysergey94@gmail.com}
