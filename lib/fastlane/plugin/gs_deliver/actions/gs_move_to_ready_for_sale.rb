@@ -1,6 +1,6 @@
 module Fastlane
   module Actions
-    class GsMoveToReadyForSale < Action
+    class GsMoveToReadyForSaleAction < Action
       def self.run(params)
         app = Spaceship::Tunes::Application.find(params[:app_identifier])
         app.release!

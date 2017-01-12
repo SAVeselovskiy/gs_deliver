@@ -1,6 +1,6 @@
 module Fastlane
   module Actions
-    class GsGetAppStatus < Action
+    class GsGetAppStatusAction < Action
       def self.run(params)
         app = Spaceship::Tunes::Application.find(params[:app_identifier])
         return app.edit_version.app_status
