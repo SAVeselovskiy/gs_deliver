@@ -4,8 +4,8 @@ module Fastlane
     class GsGetAppStatusAction < Action
       def self.run(params)
         Spaceship::Portal.login()
-        app = Spaceship.app.find(params[:app_identifier])
-        return app.edit_version().app_status
+        app = Spaceship::Tunes::Application.find(params[:app_identifier])
+        return app.latest_version().app_status
       end
 
       def self.description
