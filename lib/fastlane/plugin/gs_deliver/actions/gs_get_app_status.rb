@@ -5,7 +5,7 @@ module Fastlane
       def self.run(params)
         Spaceship::Portal.login()
         app = Spaceship.app.find(params[:app_identifier])
-        return app.edit_version.app_status
+        return app.edit_version().app_status
       end
 
       def self.description
