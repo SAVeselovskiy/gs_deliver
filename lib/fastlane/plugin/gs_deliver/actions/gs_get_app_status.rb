@@ -3,7 +3,7 @@ module Fastlane
     require 'Spaceship'
     class GsGetAppStatusAction < Action
       def self.run(params)
-        Spaceship::Portal.login()
+        Spaceship::Tunes.login()
         app = Spaceship::Tunes::Application.find(params[:app_identifier])
         return app.latest_version().app_status
       end
