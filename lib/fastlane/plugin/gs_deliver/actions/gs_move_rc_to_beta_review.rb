@@ -9,12 +9,9 @@ module Fastlane
       end
       def self.run(params)
         Spaceship::Tunes.login()
-        user = CredentialsManager::AppfileConfig.try_fetch_value(:itunes_connect_id)
-        if user == nil
-          user = CredentialsManager::AppfileConfig.try_fetch_value(:apple_id)
-        end
-        params[:username] = user
-        Pilot::BuildManager.new.distribute(params)
+        config = FastlaneCore::Configuration.create(Pilot::Options.available_options, self.convert_options(params))
+        config[:distribute_external] = true
+        Pilot::BuildManager.new.distribute(config)
       end
 
       def self.description
