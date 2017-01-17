@@ -1,7 +1,6 @@
 module Fastlane
   module Actions
     require 'Pilot'
-    require 'FastlaneCore'
     class GsMoveRcToBetaReviewAction < Action
       def convert_options(options)
         o = options.__hash__.dup
