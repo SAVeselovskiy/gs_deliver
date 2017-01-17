@@ -9,7 +9,7 @@ module Fastlane
       end
       def self.run(params)
         Spaceship::Tunes.login()
-        config = FastlaneCore::Configuration.create(Pilot::Options.available_options, convert_options(params))
+        config = FastlaneCore::Configuration.create(Pilot::Options.available_options, self.convert_options(params))
         config[:distribute_external] = true
         Pilot::BuildManager.new.distribute(config)
       end
