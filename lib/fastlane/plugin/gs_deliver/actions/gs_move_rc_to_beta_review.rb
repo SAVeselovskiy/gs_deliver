@@ -3,6 +3,7 @@ module Fastlane
     require 'Pilot'
     class GsMoveRcToBetaReviewAction < Action
       def self.run(params)
+        Spaceship::Tunes.login()
         Pilot::BuildManager.new.distribute(params)
       end
 

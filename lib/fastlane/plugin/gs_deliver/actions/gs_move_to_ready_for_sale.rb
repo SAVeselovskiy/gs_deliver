@@ -2,6 +2,7 @@ module Fastlane
   module Actions
     class GsMoveToReadyForSaleAction < Action
       def self.run(params)
+        Spaceship::Tunes.login()
         app = Spaceship::Tunes::Application.find(params[:app_identifier])
         app.release!
       end
