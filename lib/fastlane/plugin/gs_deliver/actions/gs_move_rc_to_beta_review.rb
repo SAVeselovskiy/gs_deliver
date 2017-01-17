@@ -3,7 +3,7 @@ module Fastlane
     require 'Pilot'
     class GsMoveRcToBetaReviewAction < Action
       def self.run(params)
-        Pilot::BuildManager.new.distribute(options)
+        Pilot::BuildManager.new.distribute(params)
       end
 
       def self.description
