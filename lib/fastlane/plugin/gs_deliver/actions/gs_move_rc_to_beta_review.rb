@@ -1,10 +1,18 @@
 module Fastlane
   module Actions
     require 'Pilot'
+    require 'FastlaneCore'
     class GsMoveRcToBetaReviewAction < Action
+      def convert_options(options)
+        o = options.__hash__.dup
+        o.delete(:verbose)
+        o
+      end
       def self.run(params)
         Spaceship::Tunes.login()
-        Pilot::BuildManager.new.distribute(params)
+        config = FastlaneCore::Configuration.create(Pilot::Options.available_options, convert_options(params))
+        config[:distribute_external] = true
+        Pilot::BuildManager.new.distribute(config)
       end
 
       def self.description
