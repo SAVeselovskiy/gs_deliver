@@ -1,5 +1,6 @@
 module Fastlane
   module Actions
+    require 'Pilot'
     class GsMoveRcToBetaReviewAction < Action
       def self.run(params)
         Pilot::BuildManager.new.distribute(options)
