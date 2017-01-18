@@ -10,6 +10,7 @@ module Fastlane
       end
       def self.run(params)
         manager = Pilot::BuildManager.new
+        UI.error("params[username] = " + params[:username])
         manager.start(params)
         params[:distribute_external] = true
         manager.distribute(config)
