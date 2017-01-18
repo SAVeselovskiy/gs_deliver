@@ -9,10 +9,10 @@ module Fastlane
         o
       end
       def self.run(params)
-        Spaceship::Tunes.login()
-        config = FastlaneCore::Configuration.create(Pilot::Options.available_options, self.convert_options(params))
-        config[:distribute_external] = true
-        Pilot::BuildManager.new.distribute(config)
+        manager = Pilot::BuildManager.new
+        manager.start(params)
+        params[:distribute_external] = true
+        manager.distribute(config)
       end
 
       def self.description
