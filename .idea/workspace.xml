@@ -36,8 +36,18 @@
       <file leaf-file-name="gs_move_rc_to_beta_review.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
+            <state relative-caret-position="794">
+              <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config_item.rb" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Ruby/Gems/2.0.0/gems/fastlane-2.7.0/fastlane_core/lib/fastlane_core/configuration/config_item.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -58,16 +68,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="359">
               <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manager.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.gem/ruby/2.0.0/gems/fastlane-2.0.3/pilot/lib/pilot/manager.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -461,12 +461,12 @@
       <updated>1482821441470</updated>
       <workItem from="1482821443104" duration="5583000" />
       <workItem from="1483942681005" duration="23719000" />
-      <workItem from="1484747753848" duration="2814000" />
+      <workItem from="1484747753848" duration="3876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32116000" />
+    <option name="totallyTimeSpent" value="33178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -787,10 +787,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Ruby/Gems/2.0.0/gems/fastlane-2.7.0/fastlane_core/lib/fastlane_core/configuration/config_item.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="66" selection-start-line="48" selection-start-column="66" selection-end-line="48" selection-end-column="66" />
+        <state relative-caret-position="794">
+          <caret line="69" column="9" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
           <folding />
         </state>
       </provider>
