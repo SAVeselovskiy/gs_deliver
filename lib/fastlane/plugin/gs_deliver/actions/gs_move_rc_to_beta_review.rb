@@ -12,7 +12,7 @@ module Fastlane
         UI.error("GsMoveRcToBetaReviewAction start")
         manager = Pilot::BuildManager.new
         UI.error("GsMoveRcToBetaReviewAction second")
-        UI.error("params[username] = " + params.to_s)
+        UI.error("params[username] = " + params.all_keys)
         manager.start(params)
         UI.error("GsMoveRcToBetaReviewAction third")
         params[:distribute_external] = true
