@@ -12,7 +12,7 @@ module Fastlane
         UI.error("GsMoveRcToBetaReviewAction start")
         manager = Pilot::BuildManager.new
         UI.error("GsMoveRcToBetaReviewAction second")
-        UI.error("params count = " + params.all_keys.length)
+        UI.error("params count = " + params.all_keys.length.to_s)
         params.all_keys.each do |key|
           UI.error("key" + " = " + key)
         end
