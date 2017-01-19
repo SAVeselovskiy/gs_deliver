@@ -9,9 +9,12 @@ module Fastlane
         o
       end
       def self.run(params)
+        UI.error("GsMoveRcToBetaReviewAction start")
         manager = Pilot::BuildManager.new
-        UI.error("params[username] = " + params[:username])
+        UI.error("GsMoveRcToBetaReviewAction second")
+        UI.error("params[username] = " + params.to_s)
         manager.start(params)
+        UI.error("GsMoveRcToBetaReviewAction third")
         params[:distribute_external] = true
         manager.distribute(config)
       end
