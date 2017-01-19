@@ -37,6 +37,8 @@ module Fastlane
       end
 
       def self.available_options
+        user = CredentialsManager::AppfileConfig.try_fetch_value(:itunes_connect_id)
+        user ||= CredentialsManager::AppfileConfig.try_fetch_value(:apple_id)
         [
             # {username:"cimobdaemon@gmail.com",changelog: testflight_changelog,
             #  beta_app_description:ENV["target"],
@@ -44,7 +46,8 @@ module Fastlane
             #  beta_app_feedback_email: "cimobdaemon@gmail.com"}
             FastlaneCore::ConfigItem.new(key: :username,
                                     optional: false,
-                                        type: String),
+                                        type: String,
+                                         default_value: user),
             FastlaneCore::ConfigItem.new(key: :changelog,
                                          optional: false,
                                          type: String),
