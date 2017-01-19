@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13011454-2048-45df-a314-4fb6319470de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
     </list>
     <ignored path="fastlane-plugin-gs_deliver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="version.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -32,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gs_move_rc_to_beta_review.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gs_move_rc_to_beta_review.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -135,8 +135,8 @@
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_app_status.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_to_ready_for_sale.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb" />
+        <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
       </list>
     </option>
   </component>
@@ -460,12 +460,12 @@
       <updated>1482821441470</updated>
       <workItem from="1482821443104" duration="5583000" />
       <workItem from="1483942681005" duration="23719000" />
-      <workItem from="1484747753848" duration="2457000" />
+      <workItem from="1484747753848" duration="2507000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31759000" />
+    <option name="totallyTimeSpent" value="31809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -786,18 +786,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding />
         </state>
       </provider>
