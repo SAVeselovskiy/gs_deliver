@@ -16,7 +16,7 @@ module Fastlane
         UI.error("params count = " + params.all_keys.length.to_s)
         UI.error("GsMoveRcToBetaReviewAction third")
         params[:distribute_external] = true
-        manager.distribute(config)
+        manager.distribute(params)
       end
 
       def self.description
