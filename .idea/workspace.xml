@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13011454-2048-45df-a314-4fb6319470de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
-    </list>
+    <list default="true" id="13011454-2048-45df-a314-4fb6319470de" name="Default" comment="" />
     <ignored path="fastlane-plugin-gs_deliver.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -461,12 +458,12 @@
       <updated>1482821441470</updated>
       <workItem from="1482821443104" duration="5583000" />
       <workItem from="1483942681005" duration="23719000" />
-      <workItem from="1484747753848" duration="4045000" />
+      <workItem from="1484747753848" duration="4059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33347000" />
+    <option name="totallyTimeSpent" value="33361000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
