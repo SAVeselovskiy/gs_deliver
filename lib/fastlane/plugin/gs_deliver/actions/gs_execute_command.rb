@@ -39,6 +39,10 @@ module Fastlane
 
       def self.available_options
         [
+            FastlaneCore::ConfigItem.new(key: :lang,
+                                         description: "For fileBetaRu and etc.",
+                                         optional: true,
+                                         type: String),
             FastlaneCore::ConfigItem.new(key: :cmd,
                                  description: "Command that indicates bot action",
                                     optional: false,
