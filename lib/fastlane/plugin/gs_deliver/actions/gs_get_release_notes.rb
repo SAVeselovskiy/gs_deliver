@@ -5,8 +5,8 @@ module Fastlane
         require 'json'
         params = options.to_json
         puts("sh curl -H \"Content-Type: application/json\" -d \'"+ params +
-                   "\' https://mobile.geo4.io/bot/releaseBuilder/cmd -o " + Dir.pwd + "/../../notes/" + options[:project] + "_" +
-                   options[:displayVersionName] + ".txt")
+                   "\' https://mobile.geo4.io/bot/releaseBuilder/cmd -o " + Dir.pwd + "/../../notes/" + options[:project] + "/" +
+                   options[:displayVersionName] + "_" + lang + ".txt")
       end
 
       def self.description
@@ -28,6 +28,10 @@ module Fastlane
 
       def self.available_options
         [
+            FastlaneCore::ConfigItem.new(key: :lang,
+                                         description: "For fileBetaRu and etc.",
+                                         optional: true,
+                                         type: String),
             FastlaneCore::ConfigItem.new(key: :cmd,
                                          description: "Command that indicates bot action",
                                          optional: false,
