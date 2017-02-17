@@ -26,15 +26,18 @@ module Fastlane
           raise "Can't send command to server. :project, :displayVersionName, :cmd are required fields"
         end
         params = {}
-        params = options.to_s.to_json
+        options.all_keys.each do |key|
+          params[key] = options[key] if options[key] != nil && key != :lang
+        end
+        json_params = params.to_json
         cmnd = options[:cmd]
         response = ""
         if cmnd.include? "file"
-          response = `curl -k -H "Content-Type: application/json" -d '#{params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
+          response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
           FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
                                options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
         else
-          response = `curl -k -H "Content-Type: application/json" -d '#{params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
+          response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
         end
         response
       end

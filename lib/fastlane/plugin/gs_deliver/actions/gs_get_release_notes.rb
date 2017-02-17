@@ -7,11 +7,9 @@ module Fastlane
         options.all_keys.each do |key|
           params[key] = options[key] if options[key] != nil && key != :lang
         end
-        # params = options.all_keys
-        UI.message(params)
-        UI.message(params.to_json)
-        UI.message('curl -k -H "Content-Type: application/json" -d '+ params +' https://mobile.geo4.io/bot/releaseBuilder/cmd')
-        response = `curl -k -H "Content-Type: application/json" -d '#{params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
+        json_params = params.to_json
+        UI.message('curl -k -H "Content-Type: application/json" -d '+ json_params +' https://mobile.geo4.io/bot/releaseBuilder/cmd')
+        response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
         FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
                              options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
         response
