@@ -1,5 +1,23 @@
 module Fastlane
   module Actions
+    class FileHelper
+      def self.read(path)
+        file = File.open(path, "r+")
+        res = file.read
+        file.close
+        res
+      end
+      def self.write(path, str)
+        if not path.include? "."
+          raise "Filepath has incorrect format. You must provide file extension"
+        end
+        require 'fileutils.rb'
+        FileUtils.makedirs(File.dirname(path))
+        file = File.open(path, "w+")
+        file.write(str)
+        file.close
+      end
+    end
     class GsExecuteCommandAction < Action
       def self.run(options)
         require 'json'
@@ -10,14 +28,15 @@ module Fastlane
 
         params = options.to_json
         cmnd = options[:cmd]
+        response = ""
         if cmnd.include? "file"
-          sh ("curl -H \"Content-Type: application/json\" -d \'"+ params +
-                   "\' https://mobile.geo4.io/bot/releaseBuilder/cmd -o " + Dir.pwd + "/../../notes/" + options[:project] + "_" +
-                   options[:displayVersionName] + ".txt")
+          response = `curl -H "Content-Type: application/json" -d '#{params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
+          FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
+                               options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
         else
-          sh ("curl -H \"Content-Type: application/json\" -d \'"+ params +
-                   "\' https://mobile.geo4.io/bot/releaseBuilder/cmd")
+          response = `curl -H "Content-Type: application/json" -d '#{params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
         end
+        response
       end
 
       def self.description
