@@ -5,7 +5,7 @@ module Fastlane
         require 'json'
         params = {}
         options.all_keys.each do |key|
-          params[:key] = options[:key]
+          params[key] = options[key]
         end
         # params = options.all_keys
         UI.message(params)
