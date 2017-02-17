@@ -26,7 +26,7 @@ module Fastlane
           raise "Can't send command to server. :project, :displayVersionName, :cmd are required fields"
         end
 
-        params = options.to_json
+        params = options.to_s.to_json
         cmnd = options[:cmd]
         response = ""
         if cmnd.include? "file"
