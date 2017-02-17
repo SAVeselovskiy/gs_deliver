@@ -4,6 +4,8 @@ module Fastlane
       def self.run(options)
         require 'json'
         params = options.to_s.to_json
+        UI.message(params)
+        UI.message('curl -k -H "Content-Type: application/json" -d '+ params +' https://mobile.geo4.io/bot/releaseBuilder/cmd')
         response = `curl -k -H "Content-Type: application/json" -d '#{params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
         FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
                              options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
