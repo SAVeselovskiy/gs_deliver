@@ -25,7 +25,7 @@ module Fastlane
         if options[:project] == nil || options[:displayVersionName] == nil || options[:cmd] == nil
           raise "Can't send command to server. :project, :displayVersionName, :cmd are required fields"
         end
-
+        params = {}
         params = options.to_s.to_json
         cmnd = options[:cmd]
         response = ""

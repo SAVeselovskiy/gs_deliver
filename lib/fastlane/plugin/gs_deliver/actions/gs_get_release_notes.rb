@@ -3,8 +3,13 @@ module Fastlane
     class GsGetReleaseNotesAction < Action
       def self.run(options)
         require 'json'
-        params = options.all_keys
+        params = {}
+        options.all_keys.each do |key|
+          params[:key] = options[:key]
+        end
+        # params = options.all_keys
         UI.message(params)
+        UI.message(params.to_json)
         UI.message('curl -k -H "Content-Type: application/json" -d '+ params +' https://mobile.geo4.io/bot/releaseBuilder/cmd')
         response = `curl -k -H "Content-Type: application/json" -d '#{params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
         FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
