@@ -59,7 +59,7 @@ module Fastlane
       def self.available_options
         [
             FastlaneCore::ConfigItem.new(key: :lang,
-                                         description: "For fileBetaRu and etc.",
+                                         description: "For fileBetaRu and etc",
                                          optional: true,
                                          type: String),
             FastlaneCore::ConfigItem.new(key: :cmd,
