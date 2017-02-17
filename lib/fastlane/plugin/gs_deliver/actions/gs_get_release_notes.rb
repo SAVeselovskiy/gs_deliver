@@ -8,8 +8,10 @@ module Fastlane
           params[key] = options[key] if options[key] != nil && key != :lang
         end
         json_params = params.to_json
-        UI.message('curl -k -H "Content-Type: application/json" -d '+ json_params +' https://mobile.geo4.io/bot/releaseBuilder/cmd')
+        UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/cmd")
         response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
+        UI.message("Saving notes to" + Dir.pwd + "/../../notes/" + options[:project] + "/" +
+                             options[:displayVersionName] + "_" + options[:lang] + ".txt")
         FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
                              options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
         response
