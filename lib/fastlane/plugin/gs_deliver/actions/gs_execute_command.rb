@@ -33,10 +33,12 @@ module Fastlane
         cmnd = options[:cmd]
         response = ""
         if cmnd.include? "file"
+          UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/cmd")
           response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
           FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
                                options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
         else
+          UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/cmd")
           response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
         end
         response
