@@ -43,19 +43,13 @@ module Fastlane
 
         params = {}
         options.all_keys.each do |key|
-          params[key] = options[key] if options[key] != nil && key != :lang && key != :request
+          params[key] = options[key] if options[key] != nil && key != :request
         end
+        UI.message(params.to_s)
         json_params = params.to_json
         response = ""
-        if options[:cmd].class != Hash && (options[:cmd].include? "file")
-          UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/#{options[:request]}")
-          response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
-          FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
-                               options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
-        else
-          UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/cmd")
-          response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
-        end
+        UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/cmd")
+        response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
         response
       end
 
@@ -78,10 +72,6 @@ module Fastlane
 
       def self.available_options
         [
-            FastlaneCore::ConfigItem.new(key: :lang,
-                                         description: "For fileBetaRu and etc",
-                                         optional: true,
-                                         type: String),
             FastlaneCore::ConfigItem.new(key: :cmd,
                                  description: "Command that indicates bot action",
                                     optional: true,
