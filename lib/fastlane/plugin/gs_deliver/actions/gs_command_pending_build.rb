@@ -1,50 +1,23 @@
 module Fastlane
   module Actions
-    class FileHelper
-      def self.read(path)
-        file = File.open(path, "r+")
-        res = file.read
-        file.close
-        res
-      end
-      def self.write(path, str)
-        if not path.include? "."
-          raise "Filepath has incorrect format. You must provide file extension"
-        end
-        require 'fileutils.rb'
-        FileUtils.makedirs(File.dirname(path))
-        file = File.open(path, "w+")
-        file.write(str)
-        file.close
-      end
-    end
     class GsExecuteCommandAction < Action
       def self.run(options)
         require 'json'
+        if command[:project] == nil || command[:displayVersionName] == nil || command[:cmd] == nil || command[:project] == nil || command[:displayVersionName] == nil || command[:cmd] == nil
 
-        if options[:callCmd] != nil && options[:callCmd].class == Hash
-          if options[:storeIdentificator] == nil || options[:storeVersion] == nil || options[:platform] == nil || options[:rc] == nil || options[:callCmd] == nil
-            raise "Can't send command to server. :storeIdentificator, :storeVersion, :platform, :rc, :callCmd are required fields"
-          end
-          command = options[:callCmd]
-          if command[:project] == nil || command[:storeVersion] == nil || command[:cmd] == nil
-            raise "Can't send command to server. :project, :displayVersionName, :cmd are required fields"
-          end
-        else
-          if options[:project] == nil || options[:displayVersionName] == nil || options[:cmd] == nil
-            raise "Can't send command to server. :project, :displayVersionName, :cmd are required fields"
-          end
         end
-
-
-
+        command = options[:cmd]
+        if command[:project] == nil || command[:displayVersionName] == nil || command[:cmd] == nil
+          raise "Can't send command to server. :project, :displayVersionName, :cmd are required fields"
+        end
         params = {}
         options.all_keys.each do |key|
           params[key] = options[key] if options[key] != nil && key != :lang
         end
         json_params = params.to_json
+        cmnd = options[:cmd]
         response = ""
-        if options[:cmd].class != Hash && (options[:cmd].include? "file")
+        if cmnd.include? "file"
           UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/cmd")
           response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
           FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
@@ -80,16 +53,16 @@ module Fastlane
                                          optional: true,
                                          type: String),
             FastlaneCore::ConfigItem.new(key: :cmd,
-                                 description: "Command that indicates bot action",
-                                    optional: true,
-                                        type: String),
+                                         description: "Command that indicates bot action",
+                                         optional: false,
+                                         type: String),
             FastlaneCore::ConfigItem.new(key: :buildNumber,
                                          description: "buildNumber",
                                          optional: true,
                                          type: Integer),
             FastlaneCore::ConfigItem.new(key: :project,
                                          description: "project",
-                                         optional: true,
+                                         optional: false,
                                          type: String),
             FastlaneCore::ConfigItem.new(key: :testingProject,
                                          description: "testingProject",
@@ -97,7 +70,7 @@ module Fastlane
                                          type: String),
             FastlaneCore::ConfigItem.new(key: :displayVersionName,
                                          description: "displayVersionName",
-                                         optional: true,
+                                         optional: false,
                                          type: String),
             FastlaneCore::ConfigItem.new(key: :forgeVersionName,
                                          description: "forgeVersionName",
@@ -119,26 +92,10 @@ module Fastlane
                                          description: "messageHeader",
                                          optional: true,
                                          type: String),
-            FastlaneCore::ConfigItem.new(key: :storeIdentificator,
-                                         description: "storeIdentificator",
+            FastlaneCore::ConfigItem.new(key: :messageFooter,
+                                         description: "messageFooter",
                                          optional: true,
                                          type: String),
-            FastlaneCore::ConfigItem.new(key: :platform,
-                                         description: "platform",
-                                         optional: true,
-                                         type: String),
-            FastlaneCore::ConfigItem.new(key: :rc,
-                                         description: "rc",
-                                         optional: true,
-                                         type: String),
-            FastlaneCore::ConfigItem.new(key: :callCmd,
-                                         description: "callCmd",
-                                         optional: true,
-                                         is_string: false),
-            FastlaneCore::ConfigItem.new(key: :storeVersion,
-                                         description: "storeVersion",
-                                         optional: true,
-                                         type: String)
         ]
       end
 
