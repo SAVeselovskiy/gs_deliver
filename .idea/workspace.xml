@@ -36,8 +36,8 @@
       <file leaf-file-name="gs_execute_command.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="135" column="56" selection-start-line="135" selection-start-column="56" selection-end-line="135" selection-end-column="56" />
+            <state relative-caret-position="480">
+              <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -141,8 +141,8 @@
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_reject_latest_version.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_command_pending_build.rb" />
-        <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" />
+        <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
       </list>
     </option>
   </component>
@@ -458,7 +458,7 @@
       <workItem from="1487238024985" duration="2459000" />
       <workItem from="1487242445125" duration="378000" />
       <workItem from="1487244445470" duration="11162000" />
-      <workItem from="1487585653139" duration="2473000" />
+      <workItem from="1487585653139" duration="2647000" />
     </task>
     <task id="LOCAL-00001" summary="try new action">
       <created>1487587510413</created>
@@ -471,7 +471,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54205000" />
+    <option name="totallyTimeSpent" value="54379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -704,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="135" column="56" selection-start-line="135" selection-start-column="56" selection-end-line="135" selection-end-column="56" />
+        <state relative-caret-position="480">
+          <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
           <folding />
         </state>
       </provider>

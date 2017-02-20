@@ -30,7 +30,7 @@ module Fastlane
             raise "Can't send command to server. :storeIdentificator, :storeVersion, :platform, :rc, :callCmd are required fields"
           end
           command = options[:callCmd]
-          if command[:project] == nil || command[:storeVersion] == nil || command[:cmd] == nil
+          if command[:project] == nil || command[:displayVersionName] == nil || command[:cmd] == nil
             raise "Can't send command to server. :project, :displayVersionName, :cmd are required fields"
           end
         else
