@@ -21,6 +21,9 @@ module Fastlane
     class GsExecuteCommandAction < Action
       def self.run(options)
         require 'json'
+        if options[:request] == nil
+          raise "Can't send command to server. :request is required field"
+        end
 
         if options[:callCmd] != nil && options[:callCmd].class == Hash
           if options[:storeIdentificator] == nil || options[:storeVersion] == nil || options[:platform] == nil || options[:rc] == nil || options[:callCmd] == nil
@@ -40,12 +43,12 @@ module Fastlane
 
         params = {}
         options.all_keys.each do |key|
-          params[key] = options[key] if options[key] != nil && key != :lang
+          params[key] = options[key] if options[key] != nil && key != :lang && key != :request
         end
         json_params = params.to_json
         response = ""
         if options[:cmd].class != Hash && (options[:cmd].include? "file")
-          UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/cmd")
+          UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' https://mobile.geo4.io/bot/releaseBuilder/#{options[:request]}")
           response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' https://mobile.geo4.io/bot/releaseBuilder/cmd`
           FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
                                options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
@@ -137,6 +140,10 @@ module Fastlane
                                          is_string: false),
             FastlaneCore::ConfigItem.new(key: :storeVersion,
                                          description: "storeVersion",
+                                         optional: true,
+                                         type: String),
+            FastlaneCore::ConfigItem.new(key: :request,
+                                         description: "request",
                                          optional: true,
                                          type: String)
         ]
