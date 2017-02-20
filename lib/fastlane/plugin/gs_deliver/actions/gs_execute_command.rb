@@ -133,7 +133,7 @@ module Fastlane
             FastlaneCore::ConfigItem.new(key: :rc,
                                          description: "rc",
                                          optional: true,
-                                         type: String),
+                                         is_string:false),
             FastlaneCore::ConfigItem.new(key: :callCmd,
                                          description: "callCmd",
                                          optional: true,
