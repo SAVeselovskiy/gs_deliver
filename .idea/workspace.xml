@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13011454-2048-45df-a314-4fb6319470de" name="Default" comment="new action">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_command_pending_build.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fastlane-plugin-gs_deliver.iml" afterPath="$PROJECT_DIR$/.idea/fastlane-plugin-gs_deliver.iml" />
+    <list default="true" id="13011454-2048-45df-a314-4fb6319470de" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
     </list>
     <ignored path="fastlane-plugin-gs_deliver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -461,12 +457,20 @@
       <workItem from="1487238024985" duration="2459000" />
       <workItem from="1487242445125" duration="378000" />
       <workItem from="1487244445470" duration="11162000" />
-      <workItem from="1487585653139" duration="1831000" />
+      <workItem from="1487585653139" duration="1860000" />
     </task>
+    <task id="LOCAL-00001" summary="try new action">
+      <created>1487587510413</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1487587510413</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53563000" />
+    <option name="totallyTimeSpent" value="53592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -503,7 +507,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="try new action" />
+    <option name="LAST_COMMIT_MESSAGE" value="try new action" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
