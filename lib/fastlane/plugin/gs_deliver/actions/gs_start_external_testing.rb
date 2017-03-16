@@ -24,7 +24,7 @@ module Fastlane
           return
         end
 
-        build.build_train.update_testing_status!(true, type, build)
+        build.build_train.update_testing_status!(true, 'external', build)
       end
 
       def self.description
