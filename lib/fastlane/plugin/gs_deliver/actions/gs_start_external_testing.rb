@@ -2,7 +2,7 @@ module Fastlane
   module Actions
     require 'Spaceship'
     require 'pilot'
-    class GsGetAppStatusAction < Action
+    class GsStartExternalTestingAction < Action
       def self.run(params)
         build_manager = Pilot::BuildManager.new
         build_manager.start(params)
