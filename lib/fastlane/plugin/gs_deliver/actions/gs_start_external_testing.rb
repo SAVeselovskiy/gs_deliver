@@ -5,6 +5,7 @@ module Fastlane
     class GsGetAppStatusAction < Action
       def self.run(params)
         build_manager = Pilot::BuildManager.new
+        build_manager.start(params)
         platform = build_manager.fetch_app_platform(required: false)
         builds = build_manager.app.all_processing_builds(platform: platform) + app.builds(platform: platform)
         # sort by upload_date
@@ -44,13 +45,9 @@ module Fastlane
       end
 
       def self.available_options
-        [
-            FastlaneCore::ConfigItem.new(key: :app_identifier,
-                                         env_name: "BUNDLE_ID",
-                                         description: "A description of your option",
-                                         optional: false,
-                                         type: String)
-        ]
+        require "pilot"
+        require "pilot/options"
+        FastlaneCore::CommanderGenerator.new.generate(Pilot::Options.available_options)
       end
 
       def self.is_supported?(platform)
