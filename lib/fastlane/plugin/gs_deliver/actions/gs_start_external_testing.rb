@@ -7,7 +7,7 @@ module Fastlane
         build_manager = Pilot::BuildManager.new
         build_manager.start(params)
         platform = build_manager.fetch_app_platform(required: false)
-        builds = build_manager.app.all_processing_builds(platform: platform) + app.builds(platform: platform)
+        builds = build_manager.app.all_processing_builds(platform: platform) + build_manager.app.builds(platform: platform)
         # sort by upload_date
         builds.sort! { |a, b| a.upload_date <=> b.upload_date }
         build = builds.last
@@ -24,7 +24,7 @@ module Fastlane
           return
         end
 
-        build.build_train.update_testing_status!(true, type, uploaded_build)
+        build.build_train.update_testing_status!(true, type, build)
       end
 
       def self.description
