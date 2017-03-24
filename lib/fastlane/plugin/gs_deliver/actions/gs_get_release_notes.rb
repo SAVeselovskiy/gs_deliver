@@ -3,18 +3,33 @@ module Fastlane
     class GsGetReleaseNotesAction < Action
       def self.run(options)
         require 'json'
+        require 'spaceship'
         params = {}
         options.all_keys.each do |key|
           params[key] = options[key] if options[key] != nil && key != :lang
         end
         json_params = params.to_json
         UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' http://mobile.geo4.io/bot/releaseBuilder/cmd")
-        response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' http://mobile.geo4.io/bot/releaseBuilder/cmd`
-        UI.message("Saving notes to" + Dir.pwd + "/../../notes/" + options[:project] + "/" +
-                             options[:displayVersionName] + "_" + options[:lang] + ".txt")
-        FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
-                             options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
-        response
+
+        client = Spaceship::GSBotClient.new
+        url = 'cmd'
+        response = client.request(:get) do |req|
+          req.url url
+          req.body = json_params
+          req.headers['Content-Type'] = 'application/json'
+        end
+
+        if response.success?
+          # response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' http://mobile.geo4.io/bot/releaseBuilder/cmd`
+          UI.message("Saving notes to" + Dir.pwd + "/../../notes/" + options[:project] + "/" +
+                         options[:displayVersionName] + "_" + options[:lang] + ".txt")
+          FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
+                               options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
+          return response
+        else
+          raise (client.class.hostname + url + ' ' + response.status.to_s + ' ' + response.body['message'])
+        end
+
       end
 
       def self.description

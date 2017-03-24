@@ -47,10 +47,20 @@ module Fastlane
         end
         UI.message(params.to_s)
         json_params = params.to_json
-        response = ""
-        UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' http://mobile.geo4.io/bot/releaseBuilder/#{options[:request]}")
-        response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' http://mobile.geo4.io/bot/releaseBuilder/#{options[:request]}`
-        response
+
+        client = Spaceship::GSBotClient.new
+        url = cmd
+        response = client.request(:get) do |req|
+          req.url url
+          req.body = json_params
+          req.headers['Content-Type'] = 'application/json'
+        end
+
+        if response.success?
+          return response
+        else
+          raise (client.class.hostname + url + ' ' + response.status.to_s + ' ' + response.body['message'])
+        end
       end
 
       def self.description
