@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13011454-2048-45df-a314-4fb6319470de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/helper/gs_bot_client.rb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_deliver_action.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
     </list>
     <ignored path="fastlane-plugin-gs_deliver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -489,7 +484,7 @@
       <workItem from="1487585653139" duration="3242000" />
       <workItem from="1488287171741" duration="193000" />
       <workItem from="1489576727842" duration="24000" />
-      <workItem from="1489647056794" duration="11252000" />
+      <workItem from="1489647056794" duration="11268000" />
     </task>
     <task id="LOCAL-00001" summary="try new action">
       <created>1487587510413</created>
@@ -498,11 +493,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487587510413</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v 0.4">
+      <created>1490346726454</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1490346726454</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66443000" />
+    <option name="totallyTimeSpent" value="66459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1200" extended-state="0" />
@@ -559,7 +561,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="try new action" />
-    <option name="LAST_COMMIT_MESSAGE" value="try new action" />
+    <MESSAGE value="v 0.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="v 0.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
