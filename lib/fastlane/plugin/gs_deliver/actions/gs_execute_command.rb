@@ -49,7 +49,7 @@ module Fastlane
         json_params = params.to_json
 
         client = Spaceship::GSBotClient.new
-        url = cmd
+        url = options[:request]
         response = client.request(:post) do |req|
           req.url url
           req.body = json_params
