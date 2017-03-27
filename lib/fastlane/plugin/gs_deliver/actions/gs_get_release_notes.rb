@@ -24,8 +24,9 @@ module Fastlane
           UI.message("Saving notes to" + Dir.pwd + "/../../notes/" + options[:project] + "/" +
                          options[:displayVersionName] + "_" + options[:lang] + ".txt")
           FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
-                               options[:displayVersionName] + "_" + options[:lang] + ".txt", response)
-          return response
+                               options[:displayVersionName] + "_" + options[:lang] + ".txt", response.body)
+          UI.message("Release notes:\n" + response.body)
+          return response.body
         else
           raise (client.class.hostname + url + ' ' + response.status.to_s + ' ' + response.body['message'])
         end
