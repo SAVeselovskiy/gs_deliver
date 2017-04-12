@@ -145,6 +145,10 @@ module Fastlane
             FastlaneCore::ConfigItem.new(key: :request,
                                          description: "request",
                                          optional: true,
+                                         type: String),
+            FastlaneCore::ConfigItem.new(key: :alias,
+                                         description: "alias",
+                                         optional: true,
                                          type: String)
         ]
       end
