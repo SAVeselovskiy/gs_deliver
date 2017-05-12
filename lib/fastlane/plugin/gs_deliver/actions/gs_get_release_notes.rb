@@ -21,9 +21,9 @@ module Fastlane
 
         if response.success?
           # response = `curl -k -H "Content-Type: application/json" -d '#{json_params}' http://mobile.geo4.io/bot/releaseBuilder/cmd`
-          UI.message("Saving notes to" + Dir.pwd + "/../../notes/" + options[:project] + "/" +
+          UI.message("Saving notes to" + Dir.pwd + "/../../notes/" + options[:alias] + "/" +
                          options[:displayVersionName] + "_" + options[:lang] + ".txt")
-          FileHelper.write(Dir.pwd + "/../../notes/" + options[:project] + "/" +
+          FileHelper.write(Dir.pwd + "/../../notes/" + options[:alias] + "/" +
                                options[:displayVersionName] + "_" + options[:lang] + ".txt", response.body)
           UI.message("Release notes:\n" + response.body)
           return response.body

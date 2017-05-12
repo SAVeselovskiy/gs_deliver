@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13011454-2048-45df-a314-4fb6319470de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
     </list>
@@ -37,8 +36,8 @@
       <file leaf-file-name="gs_get_release_notes.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+            <state relative-caret-position="330">
+              <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -489,7 +488,7 @@
       <workItem from="1489647056794" duration="11876000" />
       <workItem from="1490613720842" duration="1722000" />
       <workItem from="1491991724873" duration="374000" />
-      <workItem from="1494574847247" duration="376000" />
+      <workItem from="1494574847247" duration="513000" />
     </task>
     <task id="LOCAL-00001" summary="try new action">
       <created>1487587510413</created>
@@ -509,7 +508,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69539000" />
+    <option name="totallyTimeSpent" value="69676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1200" extended-state="0" />
@@ -747,8 +746,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        <state relative-caret-position="330">
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
           <folding />
         </state>
       </provider>
