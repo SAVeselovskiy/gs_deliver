@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13011454-2048-45df-a314-4fb6319470de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" afterPath="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
     </list>
     <ignored path="fastlane-plugin-gs_deliver.iws" />
@@ -26,8 +27,18 @@
       <file leaf-file-name="gs_execute_command.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="791">
-              <caret line="146" column="56" selection-start-line="146" selection-start-column="56" selection-end-line="146" selection-end-column="56" />
+            <state relative-caret-position="390">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gs_deliver.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -66,8 +77,8 @@
       <file leaf-file-name="version.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="75">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,8 +144,8 @@
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_move_rc_to_beta_review.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_remove_from_testflight_review.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/helper/gs_bot_client.rb" />
-        <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb" />
+        <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb" />
         <option value="$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb" />
       </list>
     </option>
@@ -488,7 +499,7 @@
       <workItem from="1489647056794" duration="11876000" />
       <workItem from="1490613720842" duration="1722000" />
       <workItem from="1491991724873" duration="374000" />
-      <workItem from="1494574847247" duration="513000" />
+      <workItem from="1494574847247" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="try new action">
       <created>1487587510413</created>
@@ -508,7 +519,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69676000" />
+    <option name="totallyTimeSpent" value="69924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1200" extended-state="0" />
@@ -582,13 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -736,14 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="791">
-          <caret line="146" column="56" selection-start-line="146" selection-start-column="56" selection-end-line="146" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_get_release_notes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -752,10 +748,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/actions/gs_execute_command.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/fastlane/plugin/gs_deliver/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
