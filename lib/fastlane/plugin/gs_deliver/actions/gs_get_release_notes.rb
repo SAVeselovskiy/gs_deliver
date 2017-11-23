@@ -9,7 +9,7 @@ module Fastlane
           params[key] = options[key] if options[key] != nil && key != :lang
         end
         json_params = params.to_json
-        UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' http://mobile.geo4.io/bot/releaseBuilder/cmd")
+        UI.message("curl -k -H \"Content-Type: application/json\" -d \'#{json_params}\' http://mobile.geo4.pro/bot/releaseBuilder/cmd")
 
         client = Spaceship::GSBotClient.new
         url = 'cmd'
