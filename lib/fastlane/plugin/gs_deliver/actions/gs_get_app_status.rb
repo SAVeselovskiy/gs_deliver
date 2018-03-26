@@ -5,6 +5,8 @@ module Fastlane
       def self.run(params)
         Spaceship::Tunes.login()
         app = Spaceship::Tunes::Application.find(params[:app_identifier])
+        status = app.latest_version().app_status
+        UI.message("App status = " + status)
         return app.latest_version().app_status
       end
 
