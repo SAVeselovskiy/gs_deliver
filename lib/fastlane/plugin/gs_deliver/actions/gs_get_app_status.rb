@@ -4,6 +4,10 @@ module Fastlane
     class GsGetAppStatusAction < Action
       def self.run(params)
         Spaceship::Tunes.login()
+        team_id = ENV["ITC_TEAM_ID"]
+        if not team_id.nil?
+          Spaceship::Tunes.client.team_id = team_id
+        end
         UI.message("Try to find app with identifier = " + params[:app_identifier])
         app = Spaceship::Tunes::Application.find(params[:app_identifier])
         status = app.latest_version().app_status
